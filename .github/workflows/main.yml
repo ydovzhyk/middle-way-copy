@@ -28,9 +28,6 @@ jobs:
       - name: Build the application
         run: npm run build
 
-      - name: Copy images folder to build folder
-        run: cp -R public/images build/
-
       - name: Build Docker image
         run: docker build -t yuriydovzhyk/middle-way-copy:latest .
 
