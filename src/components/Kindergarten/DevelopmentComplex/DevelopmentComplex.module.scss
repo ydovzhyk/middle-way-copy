@@ -1,0 +1,138 @@
+@use '../../../styles/mixins';
+.complex {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: var(--background-color);
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--border-color);
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 50px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__partText {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      gap: 30px;
+      width: 90%;
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+      width: 70%;
+    }
+  }
+
+  &__partContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+      gap: 30px;
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__partListContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__titleWrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__textWrapper {
+    width: 100%;
+    align-items: left;
+    padding: 0px 20px;
+  }
+
+  &__textList {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    list-style-type: disc;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textWrapperList {
+    margin-bottom: 10px;
+  }
+
+  &__listTitle {
+    margin-left: -20px;
+  }
+}

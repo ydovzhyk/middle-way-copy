@@ -1,0 +1,51 @@
+@use '../../../../styles/mixins';
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 265px;
+  @include mixins.mq(tablet) {
+    width: 320px;
+    height: 320px;
+  }
+  @include mixins.mq(desktop) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.image:hover {
+  border-color: #fd821f;
+  box-shadow: var(--hover-box-shadow-school-camp);
+}
+
+.navigation {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.btn {
+  background-color: transparent;
+}
+
+.btn:hover {
+  color: var(--accent-color);
+  transition: border-color 0.3s ease-out;
+}

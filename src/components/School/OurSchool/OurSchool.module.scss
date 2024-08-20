@@ -1,0 +1,157 @@
+@use '../../../styles/mixins';
+.ourschool {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  background-color: var(--main-color);
+
+  &__partSchool {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    @include mixins.mq(desktop) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__partSchoolWrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    @include mixins.mq(tablet) {
+      width: 100%;
+      height: 350px;
+    }
+    @include mixins.mq(desktop) {
+      width: 550px;
+      height: 550px;
+    }
+  }
+
+  &__partSchoolConteiner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 450px;
+    padding: 40px 10px;
+    background-color: var(--accent-color-first);
+    @include mixins.mq(tablet) {
+      padding: 40px;
+      height: 350px;
+    }
+    @include mixins.mq(desktop) {
+      top: 50px;
+      left: 55px;
+      width: 600px;
+      height: 550px;
+      padding: 50px;
+    }
+  }
+
+  &__partSchoolTitleWrapper {
+    width: 100%;
+    align-items: self-start;
+    @include mixins.mq(tablet) {
+      align-items: center;
+    }
+    @include mixins.mq(desktop) {
+      align-items: self-start;
+    }
+  }
+
+  &__partSchoolTitle {
+    @include mixins.mq(desktop) {
+      width: 70%;
+    }
+  }
+
+  &__partSchoolList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__partSchoolListDetail::before {
+    @include mixins.mq(tablet) {
+      content: '•';
+      display: inline-block;
+      width: 10px;
+      margin-right: 10px;
+      color: var(--main-color);
+    }
+  }
+
+  &__partSchoolListDetail {
+    display: flex;
+    flex-direction: column;
+    @include mixins.mq(tablet) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__partSchoolName {
+    margin-right: 5px;
+    font-weight: 600 !important;
+  }
+
+  &__imageSchool {
+    margin-top: 50px;
+    max-width: 660px;
+    max-height: 550px;
+    width: 100%;
+    height: auto;
+    @include mixins.mq(tablet) {
+      max-width: 702px;
+      width: 100%;
+    }
+    @include mixins.mq(desktop) {
+      margin-top: 0px;
+      max-width: 660px;
+      max-height: 650px;
+    }
+  }
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--main-color);
+  text-align: center;
+  @include mixins.mq(tablet) {
+    font-size: 21px;
+    text-align: center;
+  }
+  @include mixins.mq(desktop) {
+    text-align: left;
+    font-size: 24px;
+  }
+}
+
+.text {
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--main-color);
+  @include mixins.mq(tablet) {
+    margin-bottom: 0px;
+    font-size: 16px;
+  }
+  @include mixins.mq(desktop) {
+    font-size: 18px;
+  }
+}

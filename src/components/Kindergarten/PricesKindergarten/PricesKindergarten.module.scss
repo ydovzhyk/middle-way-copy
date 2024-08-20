@@ -1,0 +1,187 @@
+@use '../../../styles/mixins';
+.pricesKindergarten {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  @include mixins.mq(tablet) {
+    margin-top: 50px;
+  }
+  @include mixins.mq(desktop) {
+    margin-top: 50px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0px 10px;
+    }
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 50px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--main-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__partContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      margin-top: 50px;
+      flex-direction: row;
+      gap: 10px;
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__part {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 0px 10px;
+    width: 100%;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    @include mixins.mq(tablet) {
+      width: 35%;
+    }
+    @include mixins.mq(desktop) {
+      width: 33%;
+    }
+  }
+
+  &__topPart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 130px;
+    background-color: var(--accent-color-kindergaten);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @include mixins.mq(tablet) {
+    }
+    @include mixins.mq(desktop) {
+    }
+  }
+
+  &__titleText {
+    width: 50%;
+    @include mixins.mq(tablet) {
+      width: 70%;
+    }
+    @include mixins.mq(desktop) {
+      width: 40%;
+    }
+  }
+
+  &__divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 60%;
+    border-top: 2px solid var(--main-color);
+  }
+
+  &__centralPart {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btnWrapper {
+    position: absolute;
+    bottom: 40px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__mark {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: start;
+  }
+}

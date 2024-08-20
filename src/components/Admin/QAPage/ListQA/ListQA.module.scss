@@ -1,0 +1,159 @@
+@use '../../../../styles/mixins';
+
+.listqa {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      padding: 0 20px;
+    }
+  }
+
+  &__btnWrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    @include mixins.mq(tablet) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      flex-direction: row;
+      justify-content: left;
+      gap: 50px;
+    }
+  }
+
+  &__authorTextPart {
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  &__authorText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #989898;
+    @include mixins.mq(tablet) {
+      font-size: 14px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 15px;
+    }
+  }
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-color);
+  border-bottom: 1px solid #e9e8e8;
+  cursor: pointer;
+  @include mixins.mq(tablet) {
+    font-size: 16px;
+  }
+  @include mixins.mq(desktop) {
+    font-size: 18px;
+  }
+}
+
+.list::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  border: 1px solid #017683;
+  background: transparent
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="%23017683" d="M12 20l-12-12h24z"/></svg>')
+    no-repeat center;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.6s ease;
+  border-radius: 7px;
+  @include mixins.mq(desktop) {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    background: transparent
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"><path fill="%23017683" d="M12 20l-12-12h24z"/></svg>')
+      no-repeat center;
+  }
+}
+
+.list.open::before {
+  transform: rotate(180deg);
+}
+
+.text {
+  padding-left: 0px;
+  padding-top: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--second-text-color);
+  text-align: justify;
+  -moz-text-align-last: justify;
+  -webkit-text-align-last: justify;
+  text-align-last: auto;
+  @include mixins.mq(tablet) {
+    padding-left: 0px;
+    font-size: 16px;
+  }
+  @include mixins.mq(desktop) {
+    font-size: 18px;
+  }
+}
+
+.textWarning {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--second-text-color);
+  text-align: center;
+  @include mixins.mq(tablet) {
+    font-size: 16px;
+  }
+  @include mixins.mq(desktop) {
+    font-size: 18px;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

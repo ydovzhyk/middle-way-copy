@@ -1,0 +1,326 @@
+@use '../../../styles/mixins';
+.whatCanWeSay {
+  padding-bottom: 50px;
+  width: 100%;
+  background: var(--main-color);
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 50px;
+    }
+  }
+
+  &__part {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      padding: 0px 10px;
+    }
+  }
+
+  &__btnContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include mixins.mq(tablet) {
+      margin-top: 30px;
+    }
+    @include mixins.mq(desktop) {
+      margin-top: 75px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(143, 141, 141, 0.1);
+    border: 1px solid rgba(143, 141, 141, 0.2);
+    border-radius: 50%;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    @include mixins.mq(tablet) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include mixins.mq(desktop) {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover {
+      background-color: rgba(143, 141, 141, 0.4);
+    }
+    &:hover svg {
+      color: white;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__feedbackContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include mixins.mq(tablet) {
+      margin-bottom: 40px;
+      gap: 0px;
+    }
+  }
+
+  &__photoList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0px;
+    }
+  }
+
+  &__reviewActive {
+    width: 135px;
+    height: 135px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    @include mixins.mq(tablet) {
+      width: 100px;
+      height: 100px;
+    }
+    @include mixins.mq(desktop) {
+      width: 185px;
+      height: 185px;
+    }
+  }
+
+  &__reviewInactive {
+    width: 135px;
+    height: 135px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    filter: grayscale(70%);
+    cursor: pointer;
+    @include mixins.mq(tablet) {
+      width: 100px;
+      height: 100px;
+    }
+    @include mixins.mq(desktop) {
+      width: 185px;
+      height: 185px;
+    }
+  }
+
+  &__notes {
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background-color: azure;
+    border-radius: 5px;
+    font-size: 14px;
+    @include mixins.mq(tablet) {
+      padding: 3px 5px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    @include mixins.mq(desktop) {
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__photoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  &__reviewDivider {
+    width: 1px;
+    border: 1px solid #fab463;
+    @include mixins.mq(tablet) {
+      height: 30px;
+    }
+    @include mixins.mq(desktop) {
+      height: 60px;
+    }
+  }
+
+  &__reviewPart {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__textReview {
+    margin-left: -45px;
+    margin-right: -45px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    white-space: pre-wrap;
+    @include mixins.mq(tablet) {
+      margin-left: 0px;
+      margin-right: 0px;
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textSourcePart {
+    width: 100%;
+    @include mixins.mq(tablet) {
+      width: 80%;
+    }
+  }
+
+  &__textSource {
+    margin-left: -45px;
+    margin-right: -45px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-color);
+    white-space: pre-wrap;
+    @include mixins.mq(tablet) {
+      margin-left: 0px;
+      margin-right: 0px;
+      font-size: 14px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &__btnWrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    @include mixins.mq(tablet) {
+      margin: 0px;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__emtyText {
+    margin-top: 40px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__divider {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 90%;
+    border-bottom: 1px solid var(--border-color);
+    @include mixins.mq(tablet) {
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+  }
+}
+.arrowlinkRigth {
+  margin-left: 6px;
+}
+
+.arrowlinkLeft {
+  margin-right: 6px;
+}

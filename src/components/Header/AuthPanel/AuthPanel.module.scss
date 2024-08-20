@@ -1,0 +1,36 @@
+@use '../../../styles/mixins';
+.authPanel {
+  background-color: var(--main-color);
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+
+  &__content {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    @include mixins.mq(tablet) {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__contentText {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    font-size: 15px;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+      text-align: left;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+}

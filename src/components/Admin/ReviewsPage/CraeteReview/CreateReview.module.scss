@@ -1,0 +1,93 @@
+@use '../../../../styles/mixins';
+
+.review {
+  padding-bottom: 40px;
+  width: 100%;
+  @include mixins.mq(tablet) {
+    padding: 0px 10px;
+    padding-bottom: 40px;
+  }
+
+  &__titleContent {
+    margin-bottom: 20px;
+  }
+
+  &__formInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    @include mixins.mq(tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0px;
+    }
+  }
+
+  &__part {
+    width: 100%;
+    height: 42px;
+    @include mixins.mq(tablet) {
+      width: 24%;
+      height: 50px;
+    }
+    @include mixins.mq(desktop) {
+      height: 50px;
+    }
+  }
+
+  &__partBackground {
+    width: 100%;
+    height: 38px;
+    background-color: #e8f0fd;
+    @include mixins.mq(tablet) {
+      height: 48px;
+    }
+  }
+
+  &__textContant {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include mixins.mq(tablet) {
+      align-items: start;
+    }
+  }
+}

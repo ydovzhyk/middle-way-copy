@@ -1,0 +1,81 @@
+@use '../../styles/mixins';
+.kindergarten {
+  width: 100%;
+  background-color: var(--main-color);
+
+  &__slide {
+    position: relative;
+    height: 400px;
+    background-image: url('../../images/kindergarten/kindergarten01.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include mixins.mq(tablet) {
+      background-image: url('../../images/kindergarten/kindergarten.webp');
+      height: 400px;
+      background-size: cover;
+      background-position: center center;
+    }
+    @include mixins.mq(desktop) {
+      height: 550px;
+      background-size: 100% auto;
+    }
+  }
+
+  &__slideBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 5px 5px;
+    @include mixins.mq(tablet) {
+      height: 400px;
+    }
+    @include mixins.mq(desktop) {
+      height: 550px;
+    }
+  }
+
+  &__sloganPart {
+    margin-bottom: 10px;
+    width: 300px;
+    @include mixins.mq(tablet) {
+      margin-bottom: 20px;
+      width: 350px;
+    }
+    @include mixins.mq(desktop) {
+      margin-bottom: 20px;
+      width: 400px;
+    }
+  }
+
+  &__mainTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@use '../../../styles/mixins';
+.travel {
+  margin-top: 50px;
+  width: 100%;
+  background-color: var(--main-color);
+
+  &__content {
+    padding: 0 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--border-color);
+    @include mixins.mq(tablet) {
+      padding: 0 10px;
+    }
+    @include mixins.mq(desktop) {
+      padding: 0 20px;
+    }
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 40px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__contentPart {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    @include mixins.mq(tablet) {
+      margin-top: 40px;
+    }
+  }
+
+  &__textContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    @include mixins.mq(tablet) {
+      width: 70%;
+    }
+    @include mixins.mq(desktop) {
+      width: 60%;
+    }
+  }
+
+  &__textContentParts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+      gap: 0px;
+    }
+  }
+
+  &__textContentPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      width: 50%;
+    }
+  }
+
+  &__imageTextContent {
+    margin-top: -20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: url('../../../images/camp_2/travel_tysa/notes.webp');
+    background-size: cover;
+    width: 288px;
+    height: 378px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include mixins.mq(tablet) {
+      padding: 30px 35px;
+      width: 300px;
+      height: 394px;
+    }
+    @include mixins.mq(desktop) {
+      padding: 30px 50px;
+      width: 370px;
+      height: 486px;
+    }
+  }
+
+  &__textNotes {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      margin-left: 0px;
+      font-size: 18px;
+      text-align: center;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 22px;
+    }
+  }
+}

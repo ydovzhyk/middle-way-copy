@@ -1,2 +1,3 @@
-# middle-way-copy
- for testing
+# middle-way
+
+Middle Way - school & kindergarten site

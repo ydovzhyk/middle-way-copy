@@ -1,0 +1,144 @@
+@use '../../../../styles/mixins';
+.menuTable {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  @include mixins.mq(tablet) {
+    overflow: auto;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    background-image: url('../../../../images/kindergarten/food/tablet.webp');
+  }
+  @include mixins.mq(desktop) {
+    background-image: url('../../../../images/kindergarten/food/desctop.webp');
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__part {
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      padding: 0px 20px;
+      width: 70%;
+    }
+    @include mixins.mq(desktop) {
+      width: 50%;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    @include mixins.mq(tablet) {
+      margin-left: 120px;
+    }
+  }
+
+  &__btn {
+    width: 55px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color-kindergaten);
+    color: var(--accent-color-kindergaten);
+    @include mixins.mq(tablet) {
+      width: 60px;
+      height: 40px;
+    }
+  }
+
+  &__btnSelected {
+    background-color: var(--accent-color-kindergaten);
+    color: var(--main-color);
+  }
+
+  &__btn:hover {
+    background-color: var(--accent-color-kindergaten);
+    color: var(--main-color);
+    transition: opacity 0.3s ease;
+  }
+
+  &__description {
+    width: 100%;
+  }
+
+  &__descriptionPartList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__descriptionPart {
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-bottom: 2px dotted var(--table-line-color);
+    @include mixins.mq(tablet) {
+      gap: 20px;
+    }
+  }
+
+  &__descriptionMeal {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: flex-start;
+  }
+
+  &__dishList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: auto;
+  }
+}

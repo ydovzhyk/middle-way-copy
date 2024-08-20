@@ -1,0 +1,162 @@
+@use '../../../styles/mixins';
+.routine {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: var(--background-color);
+  @include mixins.mq(tablet) {
+    margin-top: 50px;
+  }
+  @include mixins.mq(desktop) {
+    margin-top: 50px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--border-color);
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 50px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--main-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--main-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__partContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      gap: 20px;
+    }
+  }
+
+  &__sliderContainer {
+    margin: 0px -45px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    @include mixins.mq(tablet) {
+      margin: 0px 0px;
+      margin-top: 50px;
+    }
+  }
+
+  &__sliderCard {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 438px;
+    border-radius: 10px;
+    @include mixins.mq(tablet) {
+      width: 50%;
+      min-height: 438px;
+    }
+    @include mixins.mq(desktop) {
+      min-height: 588px;
+    }
+  }
+
+  &__btnWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btnPrev,
+  &__btnNext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 50%;
+    z-index: 1000;
+    border: 1px solid rgba(77, 76, 76, 0.182);
+    @include mixins.mq(tablet) {
+      width: 55px;
+      height: 55px;
+    }
+    &:hover {
+      background-color: rgba(77, 76, 76, 0.182);
+      border: 1px solid rgba(77, 76, 76, 0.182);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.arrowlinkRigth {
+  margin-left: 6px;
+}
+
+.arrowlinkLeft {
+  margin-right: 6px;
+}

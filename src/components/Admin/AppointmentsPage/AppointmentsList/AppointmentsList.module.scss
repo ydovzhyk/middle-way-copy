@@ -1,0 +1,145 @@
+@use '../../../../styles/mixins';
+.appointmentsList {
+  &__titleContent {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__itemMainText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__itemPartClient {
+    padding: 10px 10px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      padding: 15px 15px;
+      width: 50%;
+    }
+  }
+
+  &__itemPartUser {
+    padding: 10px 10px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      padding: 15px 15px;
+      width: 50%;
+    }
+  }
+
+  &__textarea {
+    padding: 10px 10px;
+    width: 100%;
+    white-space: pre-wrap;
+    border: 1px solid var(--border-color);
+  }
+
+  &__btnWrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  &__itemQuestion {
+    white-space: pre-wrap;
+  }
+
+  &__authorTextPart {
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  &__authorText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #989898;
+    @include mixins.mq(tablet) {
+      font-size: 14px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 15px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textEmpty {
+    margin-bottom: 30px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+}

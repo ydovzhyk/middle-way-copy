@@ -1,0 +1,56 @@
+@use '../../../styles/mixins';
+
+.navigationPanel {
+  padding: 5px 25px;
+  background-color: var(--main-color);
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  @include mixins.mq(tablet) {
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include mixins.mq(desktop) {
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 35px;
+    border: 2px solid #017683bb;
+    border-radius: 0.5em;
+    background-color: transparent;
+    background-color: #017683bb;
+  }
+
+  &__menuIcon {
+    width: 30px;
+    height: 40px;
+  }
+
+  &__menuNavigation {
+    left: 0;
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 1001;
+  }
+
+  &__menuContainer {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}

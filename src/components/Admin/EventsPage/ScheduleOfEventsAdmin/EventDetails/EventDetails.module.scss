@@ -1,0 +1,119 @@
+@use '../../../../../styles/mixins';
+
+.eventDetails {
+  position: relative;
+
+  &__closeButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    @include mixins.mq(desktop) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__closeButton:hover {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__subjectTitle {
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--accent-color-first);
+    text-transform: uppercase;
+    @include mixins.mq(tablet) {
+      margin-bottom: 40px;
+      font-size: 15px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__eventPhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    @include mixins.mq(desktop) {
+      width: 70%;
+    }
+  }
+
+  &__descriptionText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    white-space: pre-wrap;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+}
+
+.navigation {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: transparent;
+  @include mixins.mq(tablet) {
+    font-size: 16px;
+  }
+  @include mixins.mq(desktop) {
+    font-size: 18px;
+  }
+}
+
+.btn:hover {
+  color: var(--accent-color);
+  transition: border-color 0.3s ease-out;
+}

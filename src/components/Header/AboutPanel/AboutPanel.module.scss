@@ -1,0 +1,150 @@
+@use '../../../styles/mixins';
+
+.aboutPanel {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  background-color: var(--main-color);
+  @include mixins.mq(tablet) {
+    padding: 0;
+    border-top: 0;
+    width: 63%;
+    gap: 20px;
+  }
+  @include mixins.mq(desktop) {
+    width: 68%;
+    gap: 0px;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 280px;
+  }
+
+  &__part {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__partAddressContent {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 5px;
+  }
+
+  &__partAddress {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__partPhone {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include mixins.mq(tablet) {
+      gap: 5px;
+    }
+    @include mixins.mq(desktop) {
+      gap: 10px;
+    }
+  }
+
+  &__partSotialContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mixins.mq(tablet) {
+      gap: 10px;
+    }
+    @include mixins.mq(desktop) {
+      flex-direction: row;
+      gap: 90px;
+    }
+  }
+
+  &__partSotial {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__iconWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 1.3;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+}
+
+.title {
+  font-weight: 200;
+  font-size: 15px;
+  color: var(--accent-color-kindergaten);
+  @include mixins.mq(tablet) {
+    font-size: 16px;
+  }
+  @include mixins.mq(desktop) {
+    font-size: 18px;
+  }
+}
+
+.textAddress {
+  font-weight: 200;
+  font-size: 13px;
+  color: var(--second-text-color);
+  @include mixins.mq(tablet) {
+    font-size: 14px;
+  }
+  @include mixins.mq(desktop) {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.topPanel__part::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.topPanel__part:hover::after {
+  opacity: 1;
+}
+
+.topPanel__partAddress:hover .topPanel__text {
+  color: var(--accent-color);
+}

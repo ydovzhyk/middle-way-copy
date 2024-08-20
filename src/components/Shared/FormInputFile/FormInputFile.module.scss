@@ -1,0 +1,49 @@
+@use '../../../styles/mixins';
+
+.box {
+  padding: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  color: var(--btn-text-color);
+  border-radius: 10.3108px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.1;
+  transition: background-color var(--transition-duration) var(--timing-function),
+    color var(--transition-duration) var(--timing-function),
+    border-color var(--transition-duration) var(--timing-function),
+    box-shadow var(--transition-duration) var(--timing-function);
+  &:hover {
+    background-color: var(--background-btn-second-color);
+    border-color: var(--background-btn-second-color);
+    box-shadow: var(--hover-box-shadow);
+    color: var(--btn-text-color);
+  }
+  @include mixins.mq(tablet) {
+    width: 190px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @include mixins.mq(desktop) {
+    width: 230px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.label {
+  text-transform: capitalize;
+  color: var(--btn-text-color);
+  transition: color var(--transition-duration) var(--timing-function);
+  .box:hover & {
+    cursor: pointer;
+  }
+}

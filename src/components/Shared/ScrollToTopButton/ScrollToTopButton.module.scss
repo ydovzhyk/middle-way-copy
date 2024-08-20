@@ -1,0 +1,50 @@
+@use '../../../styles/mixins';
+
+.scrollToTopButton {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  @include mixins.mq(tablet) {
+    right: 30px;
+  }
+  @include mixins.mq(desktop) {
+    right: 60px;
+  }
+}
+
+.arrowIcon {
+  width: 45px;
+  height: 45px;
+  @include mixins.mq(tablet) {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.arrowUp {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fbb413;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.5s ease;
+}
+
+.blinking {
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

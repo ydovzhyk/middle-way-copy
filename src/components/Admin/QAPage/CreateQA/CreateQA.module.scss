@@ -1,0 +1,74 @@
+@use '../../../../styles/mixins';
+
+.questionsandanswers {
+  padding: 0px 10px;
+  width: 100%;
+  @include mixins.mq(tablet) {
+    padding: 00px 10px;
+  }
+
+  &__titleContent {
+    margin-bottom: 20px;
+  }
+
+  &__partInput {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    @include mixins.mq(tablet) {
+      gap: 100px;
+    }
+    @include mixins.mq(desktop) {
+      gap: 110px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__btnWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.questionsandanswers__link {
+  font-weight: 700;
+  color: initial;
+  transition: color 0.3s ease;
+}
+
+.questionsandanswers__link:hover {
+  color: var(--second-text-color);
+}

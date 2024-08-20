@@ -1,0 +1,110 @@
+@use '../../styles/mixins';
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-color);
+  z-index: 1200;
+
+  &__content {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    @include mixins.mq(tablet) {
+      padding: 10px 0;
+      flex-direction: row;
+      gap: 0px;
+    }
+    @include mixins.mq(desktop) {
+      width: 100%;
+      justify-content: space-between;
+      gap: 90px;
+    }
+  }
+
+  &__partContactWrapper {
+    width: 65%;
+  }
+
+  &__part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixins.mq(tablet) {
+      position: absolute;
+      margin-left: 180px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 200px;
+    }
+    @include mixins.mq(desktop) {
+      margin-left: 200px;
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      width: 440px;
+    }
+  }
+
+  &__partContactContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__partPhone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-weight: 200;
+    font-size: 15px;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__communication {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__partCommunication {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__textCommunication {
+    margin-left: 10px;
+    font-weight: 200;
+    font-size: 15px;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__sotialPanel {
+    padding: 3px 0;
+    border-top: 1px solid #f2f2f2;
+    @include mixins.mq(tablet) {
+      padding: 10px 0;
+    }
+  }
+}

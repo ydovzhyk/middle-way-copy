@@ -1,0 +1,222 @@
+@use '../../../styles/mixins';
+.about {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: var(--background-color);
+
+  &__content {
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--border-color);
+    @include mixins.mq(tablet) {
+      padding: 0 10px;
+    }
+    @include mixins.mq(desktop) {
+      padding: 0 20px;
+    }
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 40px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__contentPart {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    @include mixins.mq(tablet) {
+      margin-top: 50px;
+    }
+  }
+
+  &__textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__partDetailBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__partDetailWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      width: 50%;
+    }
+  }
+
+  &__cardContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include mixins.mq(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mixins.mq(desktop) {
+      padding: 0px 40px;
+      gap: 40px;
+    }
+  }
+
+  &__boxContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include mixins.mq(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixins.mq(desktop) {
+      height: 330px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__imageLogo {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  &__boxPhoto {
+    margin-bottom: 20px;
+  }
+
+  &__muneContent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__menuPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      width: 85%;
+    }
+    @include mixins.mq(desktop) {
+      width: 65%;
+      gap: 30px;
+    }
+  }
+
+  &__menuList li {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  &__menuList li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url('../../../images/camp_3/about/icon.png');
+    background-size: cover;
+  }
+}

@@ -1,0 +1,193 @@
+@use '../../../styles/mixins';
+.earlyDevelopment {
+  margin-bottom: 50px;
+  width: 100%;
+  background-color: var(--main-color);
+
+  &__content {
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid var(--border-color);
+    @include mixins.mq(tablet) {
+      gap: 30px;
+    }
+    @include mixins.mq(desktop) {
+      gap: 50px;
+    }
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 50px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__partText {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      margin-top: 50px;
+      gap: 30px;
+      width: 90%;
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+      width: 70%;
+    }
+  }
+
+  &__contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+      gap: 30px;
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+    }
+  }
+
+  &__partTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      gap: 30px;
+      width: 50%;
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+      width: 50%;
+    }
+  }
+
+  &__imageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      width: 50%;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  &__groupViberContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      gap: 30px;
+      width: 100%;
+    }
+    @include mixins.mq(desktop) {
+      gap: 40px;
+      width: 90%;
+    }
+  }
+
+  &__listDepartmentContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      flex-direction: row;
+      gap: 30px;
+    }
+  }
+
+  &__listDepartment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      width: 40%;
+    }
+    @include mixins.mq(desktop) {
+      width: 30%;
+    }
+  }
+
+  &__freeCourseContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}

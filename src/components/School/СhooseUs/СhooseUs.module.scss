@@ -1,0 +1,155 @@
+@use '../../../styles/mixins';
+.chooseUs {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: var(--background-color);
+  @include mixins.mq(tablet) {
+    margin-top: 50px;
+  }
+  @include mixins.mq(desktop) {
+    margin-top: 50px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--border-color);
+  }
+
+  &__titleContent {
+    padding: 0 10px;
+    position: absolute;
+    top: -20px;
+    background: var(--main-color);
+    border: 1px solid var(--border-color);
+    @include mixins.mq(desktop) {
+      padding: 0 50px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__textTitlePart {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: center;
+    @include mixins.mq(tablet) {
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    @include mixins.mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__partContent {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    @include mixins.mq(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+    }
+  }
+
+  &__textContent {
+    margin-top: 50px;
+    width: 90%;
+    @include mixins.mq(tablet) {
+      width: 70%;
+    }
+    @include mixins.mq(desktop) {
+      width: 50%;
+    }
+  }
+
+  &__partBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--border-color);
+    background-color: var(--main-color);
+    @include mixins.mq(tablet) {
+      width: 180px;
+      height: 180px;
+    }
+    @include mixins.mq(desktop) {
+      width: 290px;
+      height: 290px;
+    }
+  }
+
+  &__partBoxWrapper {
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    @include mixins.mq(tablet) {
+      padding: 0px 10px;
+      gap: 10px;
+    }
+    @include mixins.mq(desktop) {
+      padding: 10px 20px;
+    }
+  }
+}
