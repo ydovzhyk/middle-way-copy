@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmiddle_way_copy=self.webpackChunkmiddle_way_copy||[]).push([[6015],{56015:(e,c,p)=>{e.exports=p.p+"static/media/6.a6c9c80816ebf06684e5.webp"}}]);

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmiddle_way_copy=self.webpackChunkmiddle_way_copy||[]).push([[7184],{17184:(e,s,c)=>{c.r(s),c.d(s,{default:()=>t});var n=c(73216),d=c(70579);const a=()=>(0,d.jsx)(d.Fragment,{children:(0,d.jsx)(n.sv,{})});var r=c(70072);const t=()=>{const e=(0,r.g)();return(0,d.jsx)(d.Fragment,{children:(0,d.jsx)("div",{style:{paddingTop:"".concat(e,"px")},children:(0,d.jsx)(a,{})})})}}}]);
+//# sourceMappingURL=7184.d22764ec.chunk.js.map

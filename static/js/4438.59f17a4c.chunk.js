@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmiddle_way_copy=self.webpackChunkmiddle_way_copy||[]).push([[4438],{92645:(e,s,a)=>{a.r(s),a.d(s,{default:()=>n});var c=a(44932),i=a(73608);const d="ReviewsPage_reviewsPage__3z9gQ";var l=a(70579);const n=()=>(0,l.jsx)("section",{className:d,children:(0,l.jsxs)("div",{className:"container",children:[(0,l.jsx)(c.A,{}),(0,l.jsx)(i.A,{})]})})}}]);
+//# sourceMappingURL=4438.59f17a4c.chunk.js.map
