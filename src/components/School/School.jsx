@@ -6,7 +6,7 @@ import OurContacts from './OurContacts';
 import ChooseUs from './СhooseUs';
 import AreasStudy from './AreasStudy';
 import Appointment from 'components/Appointment';
-import useImagePreload from 'components/helpers/useImagePreload'
+import useImagePreload from 'components/helpers/useImagePreload';
 
 import s from './School.module.scss';
 

@@ -9,10 +9,12 @@ import OurDocuments from './OurDocuments';
 import OurContacts from './OurContacts';
 import EarlyDevelopment from './EarlyDevelopment';
 import Appointment from 'components/Appointment';
+import useImagePreload from 'components/helpers/useImagePreload';
 
 import s from './Kindergarten.module.scss';
 
 const Kindergarten = () => {
+  useImagePreload('../../images/kindergarten/kindergarten.webp');
   return (
     <div className={s.kindergarten}>
       <div className={s.kindergarten__slide}>

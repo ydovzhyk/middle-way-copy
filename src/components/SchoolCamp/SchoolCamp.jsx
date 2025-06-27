@@ -5,10 +5,12 @@ import AboutSummerCamp from './AboutSummerCamp';
 import PricesSummerCamp from './PricesSummerCamp/PricesSummerCamp';
 import ContactUs from './ContactUs/ContactUs';
 import Appointment from 'components/Appointment';
+import useImagePreload from 'components/helpers/useImagePreload';
 
 import s from './SchoolCamp.module.scss';
 
 const SchoolCamp = () => {
+  useImagePreload('../../images/camp_3/school_camp.webp');
   return (
     <>
       <Helmet>

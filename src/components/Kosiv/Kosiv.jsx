@@ -9,11 +9,13 @@ import MustHave from './MustHave';
 import Prices from './Prices';
 import Catalog from '../Tysa/Catalog/Catalog';
 import logoSlide from '../../images/camp/logo_white.png';
+import useImagePreload from 'components/helpers/useImagePreload';
 
 import s from './Kosiv.module.scss';
 
 const Kosiv = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
+  useImagePreload('../../images/camp/camp.webp');
   return (
     <>
       <Helmet>

@@ -4,9 +4,12 @@ import AccommodationTysa from './AccommodationTysa';
 import Catalog from './Catalog';
 import RoutineTysa from './RoutineTysa';
 import MustHaveTysa from './MustHaveTysa';
+import useImagePreload from 'components/helpers/useImagePreload';
+
 import s from './Tysa.module.scss';
 
 const Tysa = () => {
+  useImagePreload('../../images/camp_2/camp_2.webp');
   return (
     <div className={s.tysa}>
       <div className={s.tysa__slide}>
