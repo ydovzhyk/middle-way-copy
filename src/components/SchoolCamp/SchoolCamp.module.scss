@@ -17,7 +17,7 @@
     }
     @include mixins.mq(desktop) {
       height: 500px;
-      background-size: 100% auto;
+      background-size: cover;
     }
   }
 
