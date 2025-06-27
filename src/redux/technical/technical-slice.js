@@ -35,6 +35,7 @@ const initialState = {
   totalPages: 1,
   listQA: [],
   editQA: null,
+  link: 'https://middleway-in-ua.netlify.app/?action=authorize&password=0503562938',
 };
 
 const technical = createSlice({
