@@ -6,10 +6,12 @@ import OurContacts from './OurContacts';
 import ChooseUs from './СhooseUs';
 import AreasStudy from './AreasStudy';
 import Appointment from 'components/Appointment';
+import useImagePreload from 'components/helpers/useImagePreload'
 
 import s from './School.module.scss';
 
 const School = () => {
+  useImagePreload('../../images/school/school.jpg');
   return (
     <div className={s.school}>
       <div className={s.school__slide}>
